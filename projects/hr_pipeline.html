@@ -35,10 +35,72 @@
                 <li>Hadoop: Configured to work with Spark for file handling.</li>
                 <li>VS Code: Integrated development environment used for coding and debugging.</li>
             </ul>
-            <p><strong>Challenges:</strong> Description of challenges faced and solutions.</p>
-            <p><strong>Lessons Learned:</strong> What you learned from the project.</p>
+
+            <h3>Challenges</h3>
+            <ul>
+                <li><strong>File Handling and Permissions</strong>
+                    <p>Challenge: Encountered <code>FileNotFoundError</code> and <code>PermissionError</code> when
+                        reading the input file and overwriting the output file.</p>
+                    <p>Solution: Ensured the input file existed at the specified path, closed any open instances of the
+                        output file, adjusted file permissions using <code>os.chmod</code>, and removed existing files
+                        programmatically before writing new data.</p>
+                </li>
+                <li><strong>Data Transformation</strong>
+                    <p>Challenge: Handling inconsistent date formats, missing values, and normalizing job titles.</p>
+                    <p>Solution: Used Spark SQL functions to format dates consistently, calculated employee tenure in
+                        days, dropped rows with critical missing values, and used regex to normalize job titles.</p>
+                </li>
+                <li><strong>Environment Configuration</strong>
+                    <p>Challenge: Issues with setting up the Hadoop home directory and configuring Spark environment
+                        variables.</p>
+                    <p>Solution: Correctly set the <code>HADOOP_HOME</code> environment variable and configured Spark to
+                        use the local file system. Ensured all dependencies were correctly installed and paths were
+                        correctly set.</p>
+                </li>
+                <li><strong>Performance Optimization</strong>
+                    <p>Challenge: Processing large datasets efficiently.</p>
+                    <p>Solution: Leveraged PySpark for distributed processing and ensured efficient use of resources by
+                        tuning Spark configurations.</p>
+                </li>
+            </ul>
+
+            <h3>Lessons Learned</h3>
+            <ul>
+                <li><strong>Importance of Data Cleaning</strong>
+                    <p>Ensuring data integrity and consistency is crucial for accurate analysis and visualization.
+                        Cleaning data by handling missing values, normalizing formats, and ensuring consistency is
+                        essential.</p>
+                </li>
+                <li><strong>Effective Use of ETL Tools</strong>
+                    <p>Learned to effectively use PySpark for large-scale data processing and Pandas for data
+                        manipulation. Understanding the strengths and appropriate use cases for each tool improved the
+                        efficiency and scalability of the pipeline.</p>
+                </li>
+                <li><strong>Handling File Permissions and Errors</strong>
+                    <p>Gained a deeper understanding of file handling, permissions, and error management in Python.
+                        Learned to proactively manage files by checking and adjusting permissions programmatically.</p>
+                </li>
+                <li><strong>Environment Configuration and Management</strong>
+                    <p>Realized the importance of proper environment setup and configuration for smooth execution of
+                        data processing tasks. Ensured all necessary configurations and environment variables were
+                        correctly set to avoid runtime issues.</p>
+                </li>
+                <li><strong>Visualization and Analysis</strong>
+                    <p>Learned to create meaningful visualizations to derive insights from data. Using libraries like
+                        Matplotlib and Seaborn, visualizations became more effective in communicating data patterns and
+                        trends.</p>
+                </li>
+                <li><strong>Problem-Solving and Debugging</strong>
+                    <p>Enhanced problem-solving skills by debugging and resolving various issues encountered during the
+                        project. Each challenge provided an opportunity to learn and improve the pipeline.</p>
+                </li>
+            </ul>
+
             <p><strong>Repository:</strong> <a href="https://github.com/username/hr-pipeline">GitHub Link</a></p>
-            <img src="path/to/hr_pipeline_screenshot.png" alt="HR Pipeline Screenshot">
+
+            <!-- Insert pictures here -->
+            <img src="path/to/your/image1.png" alt="Description of Image 1">
+            <img src="path/to/your/image2.png" alt="Description of Image 2">
         </div>
     </main>
     <footer>
