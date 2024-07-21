@@ -36,7 +36,29 @@
                 <li>Hadoop: Configured to work with Spark for file handling.</li>
                 <li>VS Code: Integrated development environment used for coding and debugging.</li>
             </ul>
-            <p><strong>Challenges:</strong> Description of challenges faced and solutions.</p>
+            <p><strong>Challenges:</strong>
+                1. File Handling and Permissions
+
+                Challenge: Encountered FileNotFoundError and PermissionError when reading the input file and overwriting
+                the output file.
+                Solution: Ensured the input file existed at the specified path, closed any open instances of the output
+                file, adjusted file permissions using os.chmod, and removed existing files programmatically before
+                writing new data.
+                2. Data Transformation
+
+                Challenge: Handling inconsistent date formats, missing values, and normalizing job titles.
+                Solution: Used Spark SQL functions to format dates consistently, calculated employee tenure in days,
+                dropped rows with critical missing values, and used regex to normalize job titles.
+                3. Environment Configuration
+
+                Challenge: Issues with setting up the Hadoop home directory and configuring Spark environment variables.
+                Solution: Correctly set the HADOOP_HOME environment variable and configured Spark to use the local file
+                system. Ensured all dependencies were correctly installed and paths were correctly set.
+                4. Performance Optimization
+
+                Challenge: Processing large datasets efficiently.
+                Solution: Leveraged PySpark for distributed processing and ensured efficient use of resources by tuning
+                Spark configurations.</p>
             <p><strong>Lessons Learned:</strong> What you learned from the project.</p>
             <p><strong>Repository:</strong> <a href="https://github.com/username/hr-pipeline">GitHub Link</a></p>
             <img src="path/to/hr_pipeline_screenshot.png" alt="HR Pipeline Screenshot">
