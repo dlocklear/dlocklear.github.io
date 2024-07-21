@@ -1,10 +1,11 @@
 body {
     font-family: 'Arial', sans-serif;
-    line-height: 1.6;
+    line-height: 1.5;
     color: #333;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    font-size: 14px;
 }
 
 header,
@@ -23,7 +24,7 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin: 0 10px;
 }
 
 nav ul li a {
@@ -35,12 +36,13 @@ nav ul li a {
 header h1,
 footer p {
     margin: 0;
+    font-size: 20px;
 }
 
 main {
     padding: 20px;
     max-width: 900px;
-    margin: 0 auto;
+    margin: 20px auto;
     background: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -48,41 +50,36 @@ main {
 h2 {
     color: #0073e6;
     margin-bottom: 0.5em;
+    font-size: 18px;
 }
 
-.project-overview {
-    margin-bottom: 2em;
+h3 {
+    margin-bottom: 0.5em;
+    font-size: 16px;
 }
 
-.project-overview ul {
+.project {
+    margin-bottom: 1.5em;
+}
+
+.project ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-.project-overview ul li {
+.project ul li {
     margin: 10px 0;
 }
 
-.project-overview a.button {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    font-size: 1em;
-    color: #fff;
-    background-color: #0073e6;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s, transform 0.3s;
+.project p,
+.project ul li {
+    margin: 5px 0;
 }
 
-.project-overview a.button:hover {
-    background-color: #005bb5;
-    transform: scale(1.05);
-}
-
-img {
+.project img {
     max-width: 100%;
     height: auto;
     display: block;
-    margin-top: 10px;
+    margin: 10px 0;
 }
